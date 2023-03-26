@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8" />
-    <title>Free Books By Siddharth Sir</title>
+    <title>Example of Auto Loading Bootstrap Modal on Page Load</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -19,6 +22,54 @@
         margin: 0;
         padding: 0;
       }
+      .container1{
+        display:flex;
+        flex-direction: column;
+      }
+     
+      .box1 {
+        border:2px solid black;
+        width:40vw;
+        margin:1vw 1vw 0vw 1vw;
+      }
+      .box1 img{
+        width:100%;
+      }
+      .box2{
+        margin:0vw 1vw .5vw 1vw;
+        width:40vw;
+        /* Height:13vw; */
+        border:2px solid black;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media screen and ( 400px < width < 13000px)
+      {      .grid_container{
+        display: grid;
+  grid-template-columns: auto auto ;
+  justify-content: center;
+      
+      }
+      .box1, .box2{ width:40vw;}
+    }
+      /* @media screen and (min-width: 700px)
+      {      .grid_container{
+        display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+      }
+    } */
+    @media screen and ( 100px < width < 400px)
+      {      .grid_container{
+        display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+      
+      }
+      .box1, .box2{ width:80vw;}}
+   
     </style>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -41,110 +92,89 @@
         </div>
       </div>
     </div>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a href="#"><img src="WhatsApp Image 2023-03-14 at 9.28.26 AM.jpeg" width="100vw" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/Website/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Website/killergenixBooks.html">Killergenix Books</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Free Courses for GATE|ESE- ECE|EE
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Digital Electronics</a></li>
-                  <li><a class="dropdown-item" href="/Website/Analog-electronics.html">Free Comprehensive Course on Analog Electronics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Network Electronics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on EDC</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Engineering mathematics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on EMFT</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/killergenixBooks.html">WorkBooks and DPPs</a>
-              </li>
-              <li class="nav-item">
-                <div class="d-flex">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
-                <a class="nav-link" href="/Website/GATE-2023.html">Admission GATE 2023</a>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
-            </div>
-              </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a href="#"><img src="WhatsApp Image 2023-03-14 at 9.28.26 AM.jpeg" width="100vw" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/Website/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Website/killergenixBooks.html">Killergenix Books</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Free Courses for GATE|ESE- ECE|EE
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Free Comprehensive Course on Digital Electronics</a></li>
+                <li><a class="dropdown-item" href="/Website/Analog-electronics.html">Free Comprehensive Course on Analog Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Free Comprehensive Course on Network Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Free Comprehensive Course on EDC</a></li>
+                <li><a class="dropdown-item" href="#">Free Comprehensive Course on Engineering mathematics</a></li>
+                <li><a class="dropdown-item" href="#">Free Comprehensive Course on EMFT</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://drive.google.com/drive/folders/14erNC4Yw030qJN20lD4yFisM5VUxelNM?usp=share_link">WorkBooks and DPPs</a>
+            </li>
+            <li class="nav-item">
+              <div class="d-flex">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
+              <a class="nav-link" href="/Website/GATE-2023.html">Admission GATE 2023</a>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
           </div>
-        </div>
-      </nav>
-    <div style="margin: 1vw; display: flex; flex-direction: column">
-      <div class="card" style="width: 18rem; flex-direction: row; width: 54vw; height: 35vh;">
-        <img
-          src="PYQ book.jpg"
-          class="card-img-top"
-          style="width: 30vw"
-          alt="..."
-        />
-        <div class="card-body" style="text-align: center">
-          <h5 class="card-title fw-bold">My PYQ Book</h5>
-          <p class="card-text">
-            This book contain PYQs of ECE and EE till GATE 2022, this book is
-            prepared by lot of efforts and hardwork
-          </p>
-          <a href="#" class="btn btn-danger">Downlod Complete PDF</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="card" style="width: 18rem; flex-direction: row; width: 54vw; margin-left: 44vw;margin-top: 1vw; height: 35vh;">
-        <div class="card-body" style="text-align: center">
-          <h5 class="card-title fw-bold">Notes of Signal & System</h5>
-          <p class="card-text">
-            This book contain all the necessary theory and lot of examples and practice questions.
-          </p>
-          <a href="#" class="btn btn-danger">Downlod Complete PDF</a>
-        </div>
-        <img
-          src="SS.jpg"
-          class="card-img-top"
-          style="width: 30vw"
-          alt="..."
-        />
-      </div>
-      <div class="card" style="width: 18rem; flex-direction: row; width: 54vw; height: 35vh; margin-top: 1vw;">
-        <img
-          src="network.jpg"
-          class="card-img-top"
-          style="width: 30vw"
-          alt="..."
-        />
-        <div class="card-body" style="text-align: center">
-          <h5 class="card-title fw-bold">My PYQ Book</h5>
-          <p class="card-text">
-            This book contain all the necessary theory and lot of examples and practice questions.
-          </p>
-          <a href="#" class="btn btn-danger">Downlod Complete PDF</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem; flex-direction: row; width: 54vw; margin-left: 44vw;margin-top: 1vw; height: 35vh;">
-        <div class="card-body" style="text-align: center">
-          <h5 class="card-title fw-bold">Notes of Signal & System</h5>
-          <p class="card-text">
-            This book contain all the necessary theory and lot of examples and practice questions.
-          </p>
-          <a href="#" class="btn btn-danger">Downlod Complete PDF</a>
-        </div>
-        <img
-          src="EDC.jpg"
-          class="card-img-top"
-          style="width: 30vw"
-          alt="..."
-        />
-      </div>
+    </nav>
+    <div class="grid_container">
+    <div class="container1">
+    <div class="box1">
+      <img src="/PYQ book.jpg" alt="">
     </div>
+    <div class="box2">
+      <p>This PYQ book is best and complete in all manners for GATE and ESE for ECE and EE, prepared by Siddhath Sir.</p>
+      <button type="button" class="btn btn-danger"> <a href="https://drive.google.com/drive/folders/17wutHkkMuvaingRmSUJD0hjyikPZePok?usp=share_link"></a>Click me<br> To get this Book</button>
+
+    </div>
+  </div>
+  <div class="container1">
+    <div class="box1">
+      <img src="/EDC.jpg" alt="">
+    </div>
+    <div class="box2">
+      <p>This EDC book is best and complete in all manners for GATE and ESE for ECE and EE, prepared by Siddhath Sir.</p>
+      <button type="button" class="btn btn-danger"> <a href="https://drive.google.com/drive/folders/17wutHkkMuvaingRmSUJD0hjyikPZePok?usp=share_link"></a>Click me<br> To get this Book</button>
+
+    </div>
+  </div>
+  <div class="container1">
+    <div class="box1">
+      <img src="/SS.jpg" alt="">
+    </div>
+    <div class="box2">
+      <p>This Signal and System book is best and complete in all manners for GATE and ESE for ECE and EE, prepared by Siddhath Sir.</p>
+      <button type="button" class="btn btn-danger"> <a href="https://drive.google.com/drive/folders/17wutHkkMuvaingRmSUJD0hjyikPZePok?usp=share_link"></a>Click me<br> To get this Book</button>
+
+    </div>
+  </div>
+  <div class="container1">
+    <div class="box1">
+      <img src="/network.jpg" alt="">
+    </div>
+    <div class="box2">
+      <p>This Network Theory book is best and complete in all manners for GATE and ESE for ECE and EE, prepared by Siddhath Sir.</p>
+      <button type="button" class="btn btn-danger"> <a href="https://drive.google.com/drive/folders/17wutHkkMuvaingRmSUJD0hjyikPZePok?usp=share_link"></a>Click me<br> To get this Book</button>
+
+    </div>
+  </div>
+</div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
