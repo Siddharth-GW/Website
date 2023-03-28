@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Interview Guidance Program GATE 2023</title>
+    <title>Example of Auto Loading Bootstrap Modal on Page Load</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -20,14 +20,19 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style.css" />
-    <style>
-      .container2{
-    margin: 4vw;
-    width: 55vw;
-    margin: auto;
-}
-    </style>
+    <Style>
+      @media screen and (1024px < width) {
+      .container2{ width: 45vw;display: flex; margin:auto;}
+      .container3{ width: 45vw;}
+      .container5{display: flex;}
+      }
+      @media screen and (1024px > width) {
+      .container2{ width: 80vw;display: flex; margin:auto;}
+      .container3 ul{ width: 80vw;}
+      .container4 img{ width: 50vw; overflow: hidden;}
+      .container5{ display: flex; align-items: center;flex-direction: column;}
+      }
+    </Style>
   </head>
   <body>
     <div id="myModal" class="modal fade">
@@ -43,48 +48,105 @@
       </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a href="#"><img src="WhatsApp Image 2023-03-14 at 9.28.26 AM.jpeg" width="100vw" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/Website/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Website/killergenixBooks.html">Killergenix Books</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Free Courses for GATE|ESE- ECE|EE
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Digital Electronics</a></li>
-                  <li><a class="dropdown-item" href="/Website/Analog-electronics.html">Free Comprehensive Course on Analog Electronics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Network Electronics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on EDC</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on Engineering mathematics</a></li>
-                  <li><a class="dropdown-item" href="#">Free Comprehensive Course on EMFT</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/killergenixBooks.html">WorkBooks and DPPs</a>
-              </li>
-              <li class="nav-item">
-                <div class="d-flex">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
-                <a class="nav-link" href="/Website/GATE-2023.html">Admission GATE 2023</a>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png" width="50vw" alt="">
-            </div>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a href="#"
+          ><img
+            src="/WhatsApp Image 2023-03-14 at 9.28.26 AM.jpeg"
+            width="100vw"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/killergenixBooks.html"
+                >Killergenix Books</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Free Courses for GATE|ESE- ECE|EE
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Comprehensive Course on Digital Electronics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/Analog-electronics.html"
+                    >Free Comprehensive Course on Analog Electronics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Comprehensive Course on Network Electronics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Comprehensive Course on EDC</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Comprehensive Course on Engineering mathematics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Comprehensive Course on EMFT</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/killergenixBooks.html"
+                >WorkBooks and DPPs</a
+              >
+            </li>
+            <li class="nav-item">
+              <div class="d-flex">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png"
+                  width="50vw"
+                  alt=""
+                />
+                <a class="nav-link" href="/GATE-2023">Interview Guidance GATE 2023</a>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewStar.svg/1200px-NewStar.svg.png"
+                  width="50vw"
+                  alt=""
+                />
+              </div>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div style="background-image: url(https://w0.peakpx.com/wallpaper/291/78/HD-wallpaper-math-computer-information-mathmatic-music-note-notes-tech-technology.jpg); height: 80vw;background-attachment: fixed;" class="bg-opacity-30;">
+      <div style="background-image: url(https://w0.peakpx.com/wallpaper/291/78/HD-wallpaper-math-computer-information-mathmatic-music-note-notes-tech-technology.jpg);background-attachment: fixed;" class="bg-opacity-30;">
         <div class="mx-auto d-flex justify-content-center">
             <div
               class="modal fade mx-auto"
@@ -161,50 +223,51 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-center">
-          <button
+          <div style="display: flex; justify-content: center;">
+          <!-- <button
             class="btn btn-danger"
             data-bs-target="#exampleModalToggle"
             data-bs-toggle="modal"
             style="margin: 0 3vw"
           >
             Click Me to Know Facts of M.Tech/MS Admissions
-          </button>
-          <button type="button" class="btn btn-danger"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfRDdggHKyh6ryY8WHfE9mlYT13Uc57JyiRGkuLL3Sfiu7eRg/viewform?usp=sf_link" target="_blank" style="text-decoration:none; color: white;">Click Me to register for IGP-GATE 2023</a> </button>
-        </button>
+          </button> -->
+          <button type="button" class="btn btn-danger" style="margin: 0 2vw;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfRDdggHKyh6ryY8WHfE9mlYT13Uc57JyiRGkuLL3Sfiu7eRg/viewform?usp=sf_link" target="_blank" style="text-decoration:none; color: white;">Click Me to register for IGP-GATE 2023</a> </button>
+        <button type="button" class="btn btn-danger" style="margin: 0 2vw;"><a href="https://drive.google.com/drive/folders/1mw1g536l3dCslGNZDNXWUm8qtPLwxB50?usp=share_link" target="_blank" style="text-decoration:none; color: white;">Click Me For interview Material</a> </button>
+        </button> 
         </div>
           <h1 class="text-center fw-bold text-light">Free Interview Guidance Program 2023 for Mtech/MS Admissions</h1>
-        <div class="d-flex">
-            <div class="m-3">
+        <div class="container5" >
+            <div class="m-3 container3">
                 <ul class="list-group">
                     <li class="list-group-item active rounded text-bg-success p-1" aria-current="true">Importance of guidance for Mtech/MS from IITs, IIITs, NITs. You may think it is silly to do interview preparation, but it is not so! The biggest mistake in interviewing is not being fully prepared. Understand that interviewing is a skill; as with all skills, preparation and practice enhance the quality of that skill.I will teach you how to handle interviews and improve your interview technique to increase your chances of being the successful candidate.The ideal is to strike a balance between poise/calm and energy/enthusiasm. We will help you to acquire proficiency in the art of facing interviews.</li>
                     <li class="list-group-item bg-warning border-2 shadow p-1 rounded bg-warning">Due to lack of proper guidance many students don't know that you can get into old IITs even with rank 2000 and above</li>
                     <li class="list-group-item shadow rounded bg-warning p-1">Due to lack of proper Guidance many students decide to drop and fail to utilise the GATE rank </li>
                   </ul>
-            </div>
-            <div> <img src="Screenshot_2022-11-14_at_5.17.41_PM_1_-removebg-preview.png" alt=""></div>
+            </div >
+            <div class="container4" > <img src="/Screenshot_2022-11-14_at_5.17.41_PM_1_-removebg-preview.png" alt=""></div>
         </div>
         
-        <hr class="border border-warning border-2 opacity-100">
+        <hr class=" border-warning border-2 opacity-100">
 
         <h1 class="text-center fw-bold text-light">IGP Program starting from 18th March 2023 <br> The details are as follows</h1>
         <div class="container2">
             <div id="carouselExampleAutoplaying"  class="carousel slide" data-bs-ride="carousel"  class="carousel slide carousel-fade">                
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="main photo.jpg" class="d-block w-100" alt="...">
+                    <img src="/main photo.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="4000">
-                    <img src="7 sessions.jpg" class="d-block w-100" alt="...">
+                    <img src="/7 sessions.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="4000">
-                    <img src="5 sessions.jpg" class="d-block w-100" alt="...">
+                    <img src="/5 sessions.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="4000">
-                    <img src="2 guidance.jpg" class="d-block w-100" alt="...">
+                    <img src="/2 guidance.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="4000">
-                    <img src="2 mock.jpg" class="d-block w-100" alt="...">
+                    <img src="/2 mock.jpg" class="d-block w-100" alt="...">
                   </div>
                 </div>
               </div>
